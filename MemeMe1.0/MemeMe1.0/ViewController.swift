@@ -13,6 +13,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var textFieldTop: UITextField!
     @IBOutlet weak var textFieldBottom: UITextField!
     @IBOutlet weak var imagePickerView: UIImageView!
+    @IBOutlet weak var toolBar: UIToolbar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +26,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         textFieldBottom.delegate = self
         textFieldBottom.text = "BOTTOM"
         textFieldBottom.textAlignment = .Center
-        
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        setToolbarButtons()
+        self.subscribeToKeyboardNotifications()
+    }
+
+    func setToolbarButtons() {
+        if let cameraButton = toolBar.items![0] as? UIBarButtonItem {
+            cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+        }
+    }
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func subscribeToKeyboardNotifications() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+    }
 }
-
