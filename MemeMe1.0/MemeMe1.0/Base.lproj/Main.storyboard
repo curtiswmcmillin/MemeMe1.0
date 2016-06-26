@@ -20,8 +20,16 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5X0-rL-4iG">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="Camera" id="XoV-7f-wra"/>
-                                    <barButtonItem title="Album" id="zK2-HC-NOA"/>
+                                    <barButtonItem title="Camera" id="XoV-7f-wra">
+                                        <connections>
+                                            <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="p0D-NZ-Sjv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Album" id="zK2-HC-NOA">
+                                        <connections>
+                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="fvH-uL-sUw"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJB-mA-tRh">
