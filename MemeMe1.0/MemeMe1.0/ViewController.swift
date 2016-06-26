@@ -8,18 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+    
+    @IBOutlet weak var textFieldTop: UITextField!
+    @IBOutlet weak var textFieldBottom: UITextField!
+    @IBOutlet weak var imagePickerView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        textFieldTop.delegate = self
+        textFieldTop.text = "TOP"
+        textFieldTop.textAlignment = .Center
+        
+        textFieldBottom.delegate = self
+        textFieldBottom.text = "BOTTOM"
+        textFieldBottom.textAlignment = .Center
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
 
