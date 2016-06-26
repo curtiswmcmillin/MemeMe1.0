@@ -37,6 +37,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         textFieldBottom.defaultTextAttributes = memeTextAttribues
     }
     
+    @IBAction func cancelThis(sender: AnyObject) {
+        print("cancelThis")
+    }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         print("viewWillAppear")
@@ -53,7 +56,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func setToolbarButtons() {
-        if let cameraButton = toolBar.items![0] as? UIBarButtonItem {
+        if let cameraButton = toolBar.items![1] as? UIBarButtonItem {
             cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         }
     }

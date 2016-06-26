@@ -4,9 +4,10 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,23 +22,23 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5X0-rL-4iG">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="klL-aF-9Or"/>
                                     <barButtonItem systemItem="camera" id="XoV-7f-wra">
                                         <connections>
                                             <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="p0D-NZ-Sjv"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="07D-HE-9kp"/>
                                     <barButtonItem title="Album" id="zK2-HC-NOA">
                                         <connections>
                                             <action selector="pickAnImage:" destination="BYZ-38-t0r" id="fvH-uL-sUw"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lfK-SX-W3F"/>
                                 </items>
                             </toolbar>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJB-mA-tRh">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                            </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aoD-4B-Mc6">
-                                <rect key="frame" x="0.0" y="44" width="600" height="512"/>
+                                <rect key="frame" x="0.0" y="39" width="600" height="517"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gOu-0C-4aW">
                                 <rect key="frame" x="20" y="64" width="560" height="30"/>
@@ -49,27 +50,43 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oh4-yH-wC7">
+                                <rect key="frame" x="0.0" y="-5" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="CN2-ZX-crH">
+                                        <rightBarButtonItems>
+                                            <barButtonItem title="Cancel" id="7ar-j6-Tgk">
+                                                <connections>
+                                                    <action selector="cancelThis:" destination="BYZ-38-t0r" id="x1n-xE-b4p"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Item" id="iam-qx-MCN"/>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5X0-rL-4iG" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="3f4-JA-Vfx"/>
-                            <constraint firstItem="gOu-0C-4aW" firstAttribute="leading" secondItem="yoK-dr-FjM" secondAttribute="leading" id="4Ll-0X-52e"/>
-                            <constraint firstItem="5X0-rL-4iG" firstAttribute="top" secondItem="yoK-dr-FjM" secondAttribute="bottom" constant="17" id="5b2-dT-BRN"/>
-                            <constraint firstItem="aoD-4B-Mc6" firstAttribute="leading" secondItem="5X0-rL-4iG" secondAttribute="leading" id="5wd-4O-thu"/>
-                            <constraint firstItem="tJB-mA-tRh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6lI-Mt-AF4"/>
-                            <constraint firstItem="tJB-mA-tRh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8gp-Z0-5n7"/>
-                            <constraint firstItem="5X0-rL-4iG" firstAttribute="top" secondItem="aoD-4B-Mc6" secondAttribute="bottom" id="HBL-bd-pzN"/>
-                            <constraint firstItem="aoD-4B-Mc6" firstAttribute="top" secondItem="tJB-mA-tRh" secondAttribute="bottom" id="UzQ-Dc-Dxw"/>
-                            <constraint firstItem="gOu-0C-4aW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="b5m-uR-r3n"/>
-                            <constraint firstItem="tJB-mA-tRh" firstAttribute="leading" secondItem="aoD-4B-Mc6" secondAttribute="leading" id="dU4-3H-bmq"/>
-                            <constraint firstItem="yoK-dr-FjM" firstAttribute="centerX" secondItem="5X0-rL-4iG" secondAttribute="centerX" id="em3-uG-UnN"/>
-                            <constraint firstItem="gOu-0C-4aW" firstAttribute="top" secondItem="tJB-mA-tRh" secondAttribute="bottom" constant="20" id="hKT-FF-iOo"/>
-                            <constraint firstAttribute="trailing" secondItem="tJB-mA-tRh" secondAttribute="trailing" id="huD-Yh-2ea"/>
-                            <constraint firstItem="aoD-4B-Mc6" firstAttribute="trailing" secondItem="5X0-rL-4iG" secondAttribute="trailing" id="nBg-72-3Cz"/>
-                            <constraint firstItem="tJB-mA-tRh" firstAttribute="trailing" secondItem="aoD-4B-Mc6" secondAttribute="trailing" id="pBt-Ru-edV"/>
-                            <constraint firstItem="gOu-0C-4aW" firstAttribute="trailing" secondItem="yoK-dr-FjM" secondAttribute="trailing" id="uXG-kZ-VUB"/>
+                            <constraint firstItem="5X0-rL-4iG" firstAttribute="top" secondItem="aoD-4B-Mc6" secondAttribute="bottom" id="0gG-T2-aei"/>
+                            <constraint firstItem="aoD-4B-Mc6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ad6-rz-s18"/>
+                            <constraint firstItem="oh4-yH-wC7" firstAttribute="leading" secondItem="aoD-4B-Mc6" secondAttribute="leading" id="HvR-IX-Xer"/>
+                            <constraint firstItem="gOu-0C-4aW" firstAttribute="leading" secondItem="yoK-dr-FjM" secondAttribute="leading" id="M3i-Ey-1gL"/>
+                            <constraint firstItem="oh4-yH-wC7" firstAttribute="trailing" secondItem="aoD-4B-Mc6" secondAttribute="trailing" id="NVj-U1-zLu"/>
+                            <constraint firstItem="5X0-rL-4iG" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="OBA-H6-tWD"/>
+                            <constraint firstItem="5X0-rL-4iG" firstAttribute="top" secondItem="yoK-dr-FjM" secondAttribute="bottom" constant="17" id="QBc-LY-DXV"/>
+                            <constraint firstItem="gOu-0C-4aW" firstAttribute="trailing" secondItem="yoK-dr-FjM" secondAttribute="trailing" id="R6c-Pt-Ima"/>
+                            <constraint firstAttribute="trailing" secondItem="aoD-4B-Mc6" secondAttribute="trailing" id="SFD-ba-gAI"/>
+                            <constraint firstItem="aoD-4B-Mc6" firstAttribute="top" secondItem="oh4-yH-wC7" secondAttribute="bottom" id="Zfw-aP-ryV"/>
+                            <constraint firstItem="aoD-4B-Mc6" firstAttribute="leading" secondItem="5X0-rL-4iG" secondAttribute="leading" id="ant-9z-wQH"/>
+                            <constraint firstItem="yoK-dr-FjM" firstAttribute="centerX" secondItem="5X0-rL-4iG" secondAttribute="centerX" id="c2t-MO-ioy"/>
+                            <constraint firstItem="gOu-0C-4aW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fB4-Vo-AIZ"/>
+                            <constraint firstItem="oh4-yH-wC7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-5" id="id9-Vp-RHl"/>
+                            <constraint firstItem="aoD-4B-Mc6" firstAttribute="trailing" secondItem="5X0-rL-4iG" secondAttribute="trailing" id="qee-b9-dFq"/>
+                            <constraint firstItem="gOu-0C-4aW" firstAttribute="top" secondItem="oh4-yH-wC7" secondAttribute="bottom" constant="25" id="s5g-Q0-Nf4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="JQc-fO-AlB"/>
                     <connections>
                         <outlet property="imagePickerView" destination="aoD-4B-Mc6" id="E7O-NT-nNR"/>
                         <outlet property="textFieldBottom" destination="yoK-dr-FjM" id="UpL-S4-ItB"/>
