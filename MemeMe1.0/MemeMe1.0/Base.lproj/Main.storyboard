@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -36,41 +37,37 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aoD-4B-Mc6">
-                                <rect key="frame" x="135" y="174" width="330" height="252"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="252" id="DCg-DA-c6M"/>
-                                    <constraint firstAttribute="width" constant="330" id="wdf-CC-tAG"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="44" width="600" height="512"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gOu-0C-4aW">
-                                <rect key="frame" x="149" y="191" width="303" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="303" id="khL-lj-tKw"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="64" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yoK-dr-FjM">
-                                <rect key="frame" x="149" y="381" width="303" height="30"/>
+                                <rect key="frame" x="20" y="509" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tJB-mA-tRh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0Ga-Ko-flQ"/>
-                            <constraint firstItem="tJB-mA-tRh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1FJ-1S-eZU"/>
-                            <constraint firstItem="aoD-4B-Mc6" firstAttribute="centerX" secondItem="gOu-0C-4aW" secondAttribute="centerX" id="3rv-rH-I5E"/>
-                            <constraint firstItem="5X0-rL-4iG" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="9LJ-ST-RoM"/>
-                            <constraint firstItem="yoK-dr-FjM" firstAttribute="centerX" secondItem="5X0-rL-4iG" secondAttribute="centerX" id="CQC-3Z-hMn"/>
-                            <constraint firstItem="gOu-0C-4aW" firstAttribute="trailing" secondItem="yoK-dr-FjM" secondAttribute="trailing" id="GnL-Uo-iBf"/>
-                            <constraint firstItem="gOu-0C-4aW" firstAttribute="leading" secondItem="yoK-dr-FjM" secondAttribute="leading" id="H0O-xd-aTC"/>
-                            <constraint firstItem="tJB-mA-tRh" firstAttribute="trailing" secondItem="5X0-rL-4iG" secondAttribute="trailing" id="RMV-km-xdI"/>
-                            <constraint firstItem="gOu-0C-4aW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="191" id="WcS-5z-z2V"/>
-                            <constraint firstAttribute="trailing" secondItem="tJB-mA-tRh" secondAttribute="trailing" id="ezJ-6x-tlt"/>
-                            <constraint firstItem="tJB-mA-tRh" firstAttribute="leading" secondItem="5X0-rL-4iG" secondAttribute="leading" id="p7O-1g-In2"/>
-                            <constraint firstItem="aoD-4B-Mc6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="roY-qz-12I"/>
-                            <constraint firstAttribute="bottom" secondItem="yoK-dr-FjM" secondAttribute="bottom" constant="189" id="v3p-2b-LgH"/>
+                            <constraint firstItem="5X0-rL-4iG" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="3f4-JA-Vfx"/>
+                            <constraint firstItem="gOu-0C-4aW" firstAttribute="leading" secondItem="yoK-dr-FjM" secondAttribute="leading" id="4Ll-0X-52e"/>
+                            <constraint firstItem="5X0-rL-4iG" firstAttribute="top" secondItem="yoK-dr-FjM" secondAttribute="bottom" constant="17" id="5b2-dT-BRN"/>
+                            <constraint firstItem="aoD-4B-Mc6" firstAttribute="leading" secondItem="5X0-rL-4iG" secondAttribute="leading" id="5wd-4O-thu"/>
+                            <constraint firstItem="tJB-mA-tRh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6lI-Mt-AF4"/>
+                            <constraint firstItem="tJB-mA-tRh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8gp-Z0-5n7"/>
+                            <constraint firstItem="5X0-rL-4iG" firstAttribute="top" secondItem="aoD-4B-Mc6" secondAttribute="bottom" id="HBL-bd-pzN"/>
+                            <constraint firstItem="aoD-4B-Mc6" firstAttribute="top" secondItem="tJB-mA-tRh" secondAttribute="bottom" id="UzQ-Dc-Dxw"/>
+                            <constraint firstItem="gOu-0C-4aW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="b5m-uR-r3n"/>
+                            <constraint firstItem="tJB-mA-tRh" firstAttribute="leading" secondItem="aoD-4B-Mc6" secondAttribute="leading" id="dU4-3H-bmq"/>
+                            <constraint firstItem="yoK-dr-FjM" firstAttribute="centerX" secondItem="5X0-rL-4iG" secondAttribute="centerX" id="em3-uG-UnN"/>
+                            <constraint firstItem="gOu-0C-4aW" firstAttribute="top" secondItem="tJB-mA-tRh" secondAttribute="bottom" constant="20" id="hKT-FF-iOo"/>
+                            <constraint firstAttribute="trailing" secondItem="tJB-mA-tRh" secondAttribute="trailing" id="huD-Yh-2ea"/>
+                            <constraint firstItem="aoD-4B-Mc6" firstAttribute="trailing" secondItem="5X0-rL-4iG" secondAttribute="trailing" id="nBg-72-3Cz"/>
+                            <constraint firstItem="tJB-mA-tRh" firstAttribute="trailing" secondItem="aoD-4B-Mc6" secondAttribute="trailing" id="pBt-Ru-edV"/>
+                            <constraint firstItem="gOu-0C-4aW" firstAttribute="trailing" secondItem="yoK-dr-FjM" secondAttribute="trailing" id="uXG-kZ-VUB"/>
                         </constraints>
                     </view>
                     <connections>
@@ -82,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="383" y="521"/>
+            <point key="canvasLocation" x="-9" y="721"/>
         </scene>
     </scenes>
 </document>
