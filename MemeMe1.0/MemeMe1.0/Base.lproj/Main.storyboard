@@ -60,7 +60,11 @@
                                                     <action selector="cancelThis:" destination="BYZ-38-t0r" id="x1n-xE-b4p"/>
                                                 </connections>
                                             </barButtonItem>
-                                            <barButtonItem title="Item" id="iam-qx-MCN"/>
+                                            <barButtonItem systemItem="action" id="iam-qx-MCN">
+                                                <connections>
+                                                    <action selector="shareThis:" destination="BYZ-38-t0r" id="5Xk-bl-fcY"/>
+                                                </connections>
+                                            </barButtonItem>
                                         </rightBarButtonItems>
                                     </navigationItem>
                                 </items>
@@ -96,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9" y="721"/>
+            <point key="canvasLocation" x="-16" y="563"/>
         </scene>
     </scenes>
 </document>

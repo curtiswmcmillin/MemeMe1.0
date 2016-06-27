@@ -37,9 +37,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         textFieldBottom.defaultTextAttributes = memeTextAttribues
     }
     
+    @IBAction func shareThis(sender: AnyObject) {
+        print("shareThis")
+    }
+    
     @IBAction func cancelThis(sender: AnyObject) {
         print("cancelThis")
     }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         print("viewWillAppear")
