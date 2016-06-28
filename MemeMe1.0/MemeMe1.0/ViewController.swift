@@ -27,14 +27,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         ]
         
         textFieldTop.delegate = self
-        textFieldTop.text = "TOP"
         textFieldTop.textAlignment = .Center
         textFieldTop.defaultTextAttributes = memeTextAttribues
         
         textFieldBottom.delegate = self
-        textFieldBottom.text = "BOTTOM"
         textFieldBottom.textAlignment = .Center
         textFieldBottom.defaultTextAttributes = memeTextAttribues
+        
+        setDefaultText()
     }
     
     @IBAction func shareThis(sender: AnyObject) {
@@ -43,8 +43,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func cancelThis(sender: AnyObject) {
         print("cancelThis")
+        imagePickerView.image = nil
+        setDefaultText()
     }
-    
+    func setDefaultText(){
+        textFieldTop.text = "TOP"
+        textFieldBottom.text = "BOTTOM"
+    }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         print("viewWillAppear")
