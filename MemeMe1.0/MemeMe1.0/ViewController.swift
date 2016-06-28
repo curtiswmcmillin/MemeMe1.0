@@ -14,6 +14,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var textFieldBottom: UITextField!
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var toolBar: UIToolbar!
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,12 +46,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func cancelThis(sender: AnyObject) {
         print("cancelThis")
         imagePickerView.image = nil
+        shareButton.enabled = false
         setDefaultText()
     }
+    
     func setDefaultText(){
         textFieldTop.text = "TOP"
         textFieldBottom.text = "BOTTOM"
     }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         print("viewWillAppear")
@@ -66,9 +71,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func setToolbarButtons() {
-        if let cameraButton = toolBar.items![1] as? UIBarButtonItem {
-            cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
-        }
+        print("setToolbarButtons")
+        
+        shareButton.enabled = imagePickerView.image != nil
+        cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
     }
     
     @IBAction func pickAnImage(sender: AnyObject) {
