@@ -41,7 +41,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func shareThis(sender: AnyObject) {
         print("shareThis")
+        //share on Facebook, Twitter
+        let string: String = "a string to share"
         
+        let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
+        
+        presentViewController(activityViewController, animated: true) {
+            print ("made it")
+        }
     }
     
     @IBAction func cancelThis(sender: AnyObject) {
