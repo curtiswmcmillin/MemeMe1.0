@@ -91,6 +91,7 @@
                     <connections>
                         <outlet property="cameraButton" destination="XoV-7f-wra" id="Ol7-UJ-FIM"/>
                         <outlet property="imagePickerView" destination="aoD-4B-Mc6" id="E7O-NT-nNR"/>
+                        <outlet property="navBar" destination="oh4-yH-wC7" id="hMO-co-4Uy"/>
                         <outlet property="shareButton" destination="iam-qx-MCN" id="HpS-HT-Ob4"/>
                         <outlet property="textFieldBottom" destination="yoK-dr-FjM" id="UpL-S4-ItB"/>
                         <outlet property="textFieldTop" destination="gOu-0C-4aW" id="Xoa-pv-ANy"/>

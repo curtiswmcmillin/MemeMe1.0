@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
+    @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var textFieldTop: UITextField!
     @IBOutlet weak var textFieldBottom: UITextField!
     @IBOutlet weak var imagePickerView: UIImageView!
@@ -42,13 +43,32 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func shareThis(sender: AnyObject) {
         print("shareThis")
         //share on Facebook, Twitter
-        let string: String = "a string to share"
+        let image: UIImage = generateMemedImage()
         
-        let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
+        let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         
         presentViewController(activityViewController, animated: true) {
             print ("made it")
         }
+    }
+    
+    func generateMemedImage() -> UIImage
+    {
+        // TODO: Hide toolbar and navbar
+        toolBar.hidden = true
+        navBar.hidden = true
+        
+        // Render view to an image
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+        let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        // TODO:  Show toolbar and navbar       
+        toolBar.hidden = false
+        navBar.hidden = false
+
+        return memedImage
     }
     
     @IBAction func cancelThis(sender: AnyObject) {
