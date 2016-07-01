@@ -55,7 +55,7 @@
                                     <navigationItem id="CN2-ZX-crH">
                                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="iam-qx-MCN">
                                             <connections>
-                                                <action selector="shareThis:" destination="BYZ-38-t0r" id="5Xk-bl-fcY"/>
+                                                <action selector="shareThis:" destination="BYZ-38-t0r" id="PzB-cN-k5R"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Cancel" id="7ar-j6-Tgk">
@@ -91,7 +91,7 @@
                     <connections>
                         <outlet property="cameraButton" destination="XoV-7f-wra" id="Ol7-UJ-FIM"/>
                         <outlet property="imagePickerView" destination="aoD-4B-Mc6" id="E7O-NT-nNR"/>
-                        <outlet property="shareButton" destination="iam-qx-MCN" id="p7E-zh-GOe"/>
+                        <outlet property="shareButton" destination="iam-qx-MCN" id="HpS-HT-Ob4"/>
                         <outlet property="textFieldBottom" destination="yoK-dr-FjM" id="UpL-S4-ItB"/>
                         <outlet property="textFieldTop" destination="gOu-0C-4aW" id="Xoa-pv-ANy"/>
                         <outlet property="toolBar" destination="5X0-rL-4iG" id="GjN-Dt-QfI"/>
@@ -99,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-73" y="681"/>
+            <point key="canvasLocation" x="-377" y="719"/>
         </scene>
     </scenes>
 </document>

@@ -41,15 +41,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func shareThis(sender: AnyObject) {
         print("shareThis")
-//        let image = [UIImage(imagePickerView.image)]
-//        let activityVC = UIActivityViewController.init(activityItems: image, applicationActivities :[])
-//        presentViewController(activityVC, animated:true, completion:nil)
-
-//        if let meme = UIImage(named: "theMeme") {
-//            let activityVC = UIActivityViewController.init(activityItems: [meme], applicationActivities :[])
-//            presentViewController(activityVC, animated:true, completion:nil)
-//            
-//        }
+        
     }
     
     @IBAction func cancelThis(sender: AnyObject) {
