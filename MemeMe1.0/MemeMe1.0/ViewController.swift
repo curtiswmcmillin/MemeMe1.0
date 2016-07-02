@@ -8,7 +8,24 @@
 
 import UIKit
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+    
+    struct Meme {
+        var originalImage: UIImage?
+        var upperText: String?
+        var lowerText: String?
+        var memeImage: UIImage?
+    }
     
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var textFieldTop: UITextField!
@@ -18,8 +35,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view, typically from a nib.
         
         let memeTextAttribues = [
@@ -49,22 +69,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         presentViewController(activityViewController, animated: true) {
             print ("made it")
+            self.saveMeme()
         }
+    }
+    
+    func saveMeme() {
+        print("saveMeme")
+        
     }
     
     func generateMemedImage() -> UIImage
     {
-        // TODO: Hide toolbar and navbar
         toolBar.hidden = true
         navBar.hidden = true
         
-        // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
         let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        // TODO:  Show toolbar and navbar       
         toolBar.hidden = false
         navBar.hidden = false
 
