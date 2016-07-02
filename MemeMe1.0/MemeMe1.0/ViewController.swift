@@ -18,14 +18,15 @@ extension UIViewController {
     }
 }
 
+struct Meme {
+    var originalImage: UIImage?
+    var bottomText: String?
+    var topText: String?
+    var memeImage: UIImage?
+}
+
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
-    struct Meme {
-        var originalImage: UIImage?
-        var upperText: String?
-        var lowerText: String?
-        var memeImage: UIImage?
-    }
     
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var textFieldTop: UITextField!
@@ -35,12 +36,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
+    var meme = Meme()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.hideKeyboardWhenTappedAround()
-        // Do any additional setup after loading the view, typically from a nib.
         
         let memeTextAttribues = [
             NSStrokeColorAttributeName: UIColor.blackColor(),
@@ -76,10 +77,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func saveMeme() {
         print("saveMeme")
         
+        meme.bottomText = textFieldBottom.text
+        meme.topText = textFieldTop.text
+        meme.originalImage = self.imagePickerView.image
+        meme.memeImage = generateMemedImage()
     }
     
-    func generateMemedImage() -> UIImage
-    {
+    func generateMemedImage() -> UIImage {
+        print ("generatedImage")
+        
         toolBar.hidden = true
         navBar.hidden = true
         
@@ -90,18 +96,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         toolBar.hidden = false
         navBar.hidden = false
-
+        
         return memedImage
     }
     
     @IBAction func cancelThis(sender: AnyObject) {
         print("cancelThis")
+        
         imagePickerView.image = nil
         shareButton.enabled = false
         setDefaultText()
     }
     
     func setDefaultText(){
+        print("setDefaultText")
+        
         textFieldTop.text = "TOP"
         textFieldBottom.text = "BOTTOM"
     }
