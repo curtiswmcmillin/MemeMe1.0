@@ -68,7 +68,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
             //do some action
             self.saveMeme()
         }
-
+        
         presentViewController(activityViewController, animated: true) {
             print("sharedit")
         }
@@ -83,6 +83,18 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         meme.memeImage = generateMemedImage()
         
         addMemeToCollection(meme)
+        
+        displaySentMemes()
+    }
+    
+    func displaySentMemes() {
+        print("displaySentMemes")
+        
+        let appDelegate = UIApplication.sharedApplication().delegate! as! AppDelegate
+        
+        let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("MemeTabBarViewController") as! MemeTabBarViewController
+        appDelegate.window?.rootViewController = tabViewController
+        appDelegate.window?.makeKeyAndVisible()
     }
     
     func addMemeToCollection(theMeme:Meme){
@@ -160,7 +172,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     func pickImage(type:UIImagePickerControllerSourceType) {
         let imagePicker = UIImagePickerController()
-
+        
         imagePicker.delegate = self
         imagePicker.sourceType = type
         presentViewController(imagePicker, animated: true, completion: nil)

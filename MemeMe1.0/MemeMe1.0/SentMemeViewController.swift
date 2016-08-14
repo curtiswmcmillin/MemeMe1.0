@@ -9,8 +9,10 @@
 import UIKit
 
 class SentMemeViewController: UIViewController {
+    
     var meme:Meme!
     @IBOutlet weak var imageView: UIImageView!
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.imageView!.image = meme.memeImage

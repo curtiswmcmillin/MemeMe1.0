@@ -106,7 +106,7 @@
         <!--Table-->
         <scene sceneID="CSH-xL-rM2">
             <objects>
-                <tableViewController title="Table" id="mD7-Se-gtP" sceneMemberID="viewController">
+                <tableViewController title="Table" id="mD7-Se-gtP" customClass="MemeTaableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jsq-W7-JVt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,11 +126,11 @@
                             <outlet property="delegate" destination="mD7-Se-gtP" id="Fk5-Oj-xvy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="I2H-ez-3JR"/>
+                    <navigationItem key="navigationItem" title="Sent Memes" id="I2H-ez-3JR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVd-xb-mab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-372" y="708"/>
+            <point key="canvasLocation" x="-357" y="716"/>
         </scene>
         <!--Collection-->
         <scene sceneID="E8L-Xc-pMT">
@@ -178,11 +178,11 @@
                             <outlet property="delegate" destination="4P8-9a-ZIG" id="zZA-LB-gjf"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="pow-mi-kUA"/>
+                    <navigationItem key="navigationItem" title="Sent Memes" id="pow-mi-kUA"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GRG-tp-XhF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-372" y="1379"/>
+            <point key="canvasLocation" x="-357" y="1379"/>
         </scene>
         <!--Sent Meme View Controller-->
         <scene sceneID="bpK-Xl-3rd">
@@ -205,12 +205,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hff-90-e5T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="258" y="1113"/>
+            <point key="canvasLocation" x="350" y="947"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Meme Tab Bar View Controller-->
         <scene sceneID="23n-E8-8ed">
             <objects>
-                <tabBarController id="Aau-nS-dOh" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MemeTabBarViewController" id="Aau-nS-dOh" customClass="MemeTabBarViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ugq-jj-8Kn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

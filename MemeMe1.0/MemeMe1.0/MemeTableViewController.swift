@@ -14,8 +14,12 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return memes.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -37,5 +41,4 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         self.navigationController!.pushViewController(sentMemeVC, animated: true)
         
     }
-    
 }
