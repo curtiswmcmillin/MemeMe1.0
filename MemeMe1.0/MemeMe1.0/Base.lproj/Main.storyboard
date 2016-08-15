@@ -127,7 +127,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Sent Memes" id="I2H-ez-3JR">
-                        <barButtonItem key="rightBarButtonItem" title="Create" id="S1e-1N-UFl">
+                        <barButtonItem key="rightBarButtonItem" title="New" id="S1e-1N-UFl">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="w9l-lZ-RBw"/>
                             </connections>
@@ -202,7 +202,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Sent Memes" id="pow-mi-kUA">
-                        <barButtonItem key="rightBarButtonItem" title="Create" id="q9k-1Q-fQB">
+                        <barButtonItem key="rightBarButtonItem" title="New" id="q9k-1Q-fQB">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="C9v-N2-3Fl"/>
                             </connections>
