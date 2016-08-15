@@ -36,7 +36,6 @@ class MemeCollectionViewController: UICollectionViewController {
         let meme = self.memes[indexPath.item]
         
         cell.memeImageView?.image = meme.memeImage
-        cell.memeTopText.text = meme.topText
         
         return cell
     }
