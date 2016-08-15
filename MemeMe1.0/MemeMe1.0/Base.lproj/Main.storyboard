@@ -195,7 +195,7 @@
         <!--Sent Meme View Controller-->
         <scene sceneID="bpK-Xl-3rd">
             <objects>
-                <viewController id="BM2-ae-UhJ" customClass="SentMemeViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SentMemeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BM2-ae-UhJ" customClass="SentMemeViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1vu-h8-FoA"/>
                         <viewControllerLayoutGuide type="bottom" id="Qb9-Tg-Upg"/>
