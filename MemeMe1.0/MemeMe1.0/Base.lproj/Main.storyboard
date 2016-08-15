@@ -106,7 +106,7 @@
         <!--Table-->
         <scene sceneID="CSH-xL-rM2">
             <objects>
-                <tableViewController title="Table" id="mD7-Se-gtP" customClass="MemeTaableViewController" sceneMemberID="viewController">
+                <tableViewController title="Table" id="mD7-Se-gtP" customClass="MemeTableViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jsq-W7-JVt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

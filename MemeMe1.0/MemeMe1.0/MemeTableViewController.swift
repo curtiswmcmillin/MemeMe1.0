@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+class MemeTableViewController: UITableViewController  {
     
     var memes: [Meme] {
         return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
@@ -18,11 +18,11 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("MemeCell")!
         let meme = self.memes[indexPath.row]
@@ -34,7 +34,7 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let sentMemeVC = self.storyboard!.instantiateViewControllerWithIdentifier("MemeCell") as! SentMemeViewController
         sentMemeVC.meme = self.memes[indexPath.row]

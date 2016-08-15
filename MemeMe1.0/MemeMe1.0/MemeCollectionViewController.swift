@@ -27,7 +27,7 @@ class MemeCollectionViewController: UICollectionViewController {
         // use custom cell
         //
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CustomMemeCell", forIndexPath: indexPath) as! CustomMemeCell
-        let meme = memes[indexPath.item]
+        let meme = self.memes[indexPath.item]
         let imageView = UIImageView(image: meme.memeImage)
         
         cell.memeImageView = imageView
