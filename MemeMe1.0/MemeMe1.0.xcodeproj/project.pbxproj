@@ -18,6 +18,7 @@
 		C47B5A3B1D16B5130093C942 /* MemeMe1_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B5A3A1D16B5130093C942 /* MemeMe1_0UITests.swift */; };
 		C48B85491D58B2E600924470 /* MemeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48B85481D58B2E600924470 /* MemeTabBarViewController.swift */; };
 		C48B854B1D58B5BE00924470 /* SentMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48B854A1D58B5BE00924470 /* SentMemeViewController.swift */; };
+		C49B72521D608D41004E6AA6 /* CustomMemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B72511D608D41004E6AA6 /* CustomMemeCell.swift */; };
 		C4DB55931D2897FF002D9D13 /* MemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB55921D2897FF002D9D13 /* MemeModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		C47B5A3C1D16B5130093C942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C48B85481D58B2E600924470 /* MemeTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTabBarViewController.swift; sourceTree = "<group>"; };
 		C48B854A1D58B5BE00924470 /* SentMemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMemeViewController.swift; sourceTree = "<group>"; };
+		C49B72511D608D41004E6AA6 /* CustomMemeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMemeCell.swift; sourceTree = "<group>"; };
 		C4DB55921D2897FF002D9D13 /* MemeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 				C446BE401D56117100ED7DE3 /* MemeTableViewController.swift */,
 				C446BE441D5621EE00ED7DE3 /* MemeCollectionViewController.swift */,
 				C48B85481D58B2E600924470 /* MemeTabBarViewController.swift */,
+				C49B72511D608D41004E6AA6 /* CustomMemeCell.swift */,
 			);
 			path = MemeMe1.0;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			files = (
 				C48B854B1D58B5BE00924470 /* SentMemeViewController.swift in Sources */,
 				C47B5A1D1D16B5130093C942 /* ViewController.swift in Sources */,
+				C49B72521D608D41004E6AA6 /* CustomMemeCell.swift in Sources */,
 				C4DB55931D2897FF002D9D13 /* MemeModel.swift in Sources */,
 				C47B5A1B1D16B5130093C942 /* AppDelegate.swift in Sources */,
 				C446BE451D5621EE00ED7DE3 /* MemeCollectionViewController.swift in Sources */,

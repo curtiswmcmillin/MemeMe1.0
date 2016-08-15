@@ -15,6 +15,8 @@ class SentMemeViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
         self.imageView!.image = meme.memeImage
+        
     }
 }
