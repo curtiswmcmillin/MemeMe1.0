@@ -152,7 +152,7 @@
         <!--Collection-->
         <scene sceneID="5tJ-9N-OGb">
             <objects>
-                <collectionViewController title="Collection" id="4P8-9a-ZIG" customClass="MemeCollectionViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="MemeCollectionViewController" title="Collection" id="4P8-9a-ZIG" customClass="MemeCollectionViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Rwf-Eq-SY8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,13 +171,20 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wlE-A6-kzv">
-                                            <rect key="frame" x="0.0" y="0.0" width="183" height="167"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="121"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPy-z3-MHh">
+                                            <rect key="frame" x="8" y="132" width="152" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
                                     <outlet property="memeImageView" destination="wlE-A6-kzv" id="GcL-H4-uI8"/>
+                                    <outlet property="memeTopText" destination="vPy-z3-MHh" id="5Do-3F-Di5"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
