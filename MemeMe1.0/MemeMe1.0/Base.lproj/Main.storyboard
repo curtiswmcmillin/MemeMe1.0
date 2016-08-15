@@ -126,7 +126,9 @@
                             <outlet property="delegate" destination="mD7-Se-gtP" id="Fk5-Oj-xvy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Sent Memes" id="I2H-ez-3JR"/>
+                    <navigationItem key="navigationItem" title="Sent Memes" id="I2H-ez-3JR">
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="S1e-1N-UFl"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVd-xb-mab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,7 +172,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="183" height="167"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wlE-A6-kzv">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wlE-A6-kzv">
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="121"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPy-z3-MHh">
@@ -193,7 +195,9 @@
                             <outlet property="delegate" destination="4P8-9a-ZIG" id="zZA-LB-gjf"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Sent Memes" id="pow-mi-kUA"/>
+                    <navigationItem key="navigationItem" title="Sent Memes" id="pow-mi-kUA">
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="q9k-1Q-fQB"/>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GRG-tp-XhF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,11 +215,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SFQ-2s-FXj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SFQ-2s-FXj">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SFQ-2s-FXj" secondAttribute="trailing" id="0lK-WD-N9o"/>
+                            <constraint firstItem="SFQ-2s-FXj" firstAttribute="top" secondItem="Z8N-FZ-uoB" secondAttribute="top" id="NkO-hV-DUP"/>
+                            <constraint firstItem="SFQ-2s-FXj" firstAttribute="leading" secondItem="Z8N-FZ-uoB" secondAttribute="leading" id="SNb-QY-0Wf"/>
+                            <constraint firstItem="SFQ-2s-FXj" firstAttribute="bottom" secondItem="Qb9-Tg-Upg" secondAttribute="top" id="T9S-yj-R2R"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="SFQ-2s-FXj" id="OP2-P2-gi3"/>
