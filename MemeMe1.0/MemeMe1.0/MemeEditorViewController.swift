@@ -123,10 +123,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBAction func cancelThis(sender: AnyObject) {
         print("cancelThis")
-        
-        imagePickerView.image = nil
-        shareButton.enabled = false
-        setDefaultText()
+        self.dismissViewControllerAnimated(true, completion: {});
     }
     
     func setDefaultText(){
