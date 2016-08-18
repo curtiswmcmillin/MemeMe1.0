@@ -17,6 +17,5 @@ class SentMemeViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.imageView!.image = meme.memeImage
-        
     }
 }

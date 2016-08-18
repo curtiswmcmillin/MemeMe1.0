@@ -39,7 +39,5 @@ class MemeTableViewController: UITableViewController  {
         let sentMemeVC = self.storyboard!.instantiateViewControllerWithIdentifier("SentMemeViewController") as! SentMemeViewController
         sentMemeVC.meme = self.memes[indexPath.row]
         self.navigationController!.pushViewController(sentMemeVC, animated: true)
-        
     }
-    
 }

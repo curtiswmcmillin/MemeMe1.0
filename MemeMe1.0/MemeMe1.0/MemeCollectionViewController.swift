@@ -39,5 +39,4 @@ class MemeCollectionViewController: UICollectionViewController {
         
         return cell
     }
-    
 }
